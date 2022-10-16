@@ -3,7 +3,7 @@ import './howWork.css'
 
 function howWork() {
   return (
-    <div>hoWork</div>
+    <div>howWork</div>
   )
 }
 
