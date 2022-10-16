@@ -1,0 +1,6 @@
+export {default as Header} from './header/header'
+export {default as WhyUs} from './whyUs/whyUs'
+export {default as Footer} from './footer/footer'
+export {default as HowWork} from './howwork/howWork'
+export {default as Popular} from './popular/popular'
+export {default as Subscribe} from './subscribe/subscribe'
