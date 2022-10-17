@@ -3,5 +3,11 @@
 :root {
     --font-family: 'Open Sans', sans-serif;
 
-    --color-header:
+    --color-bg: #ffffff;
+    --color-header: #f7f3fa;
+    --color-footer: #2e2a40;
+    --color-button: #8a78f0;
+    --color-text1: #424a54;
+    --color-text2: #231f37;
+    --color-subtext: #5f5e6a;
 }

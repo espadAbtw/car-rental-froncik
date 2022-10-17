@@ -1,0 +1,21 @@
+.cr_navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 6rem;
+}
+
+.cr_navbar-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.cr_navbar-links_logo{
+    margin-right: 2rem;
+}
+.cr_navbar-links_logo img{
+    width: 102px;
+    height: 68px;
+}
