@@ -54,6 +54,7 @@ a {
         margin: 4rem;
     }
   }
+  /* Mobilka */
   @media screen and (max-width:550px) {
     .section__padding {
         padding: 4rem 2rem;
@@ -66,3 +67,5 @@ a {
   .color_header{
     background-color: var(--color-header);
   }
+
+  
