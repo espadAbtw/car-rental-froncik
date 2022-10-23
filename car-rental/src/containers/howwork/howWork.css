@@ -1,0 +1,24 @@
+.cr_howWork {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+}
+.cr_howWork-title {
+    color: var(--color-text2);   
+    font-size: 30px;
+    margin-bottom: 1rem;
+}
+.cr_howWork-text {
+    color: var(--color-text1);
+    font-size: 24px;
+    padding: 1rem 0;
+}
+.cr_howWork-text .p2 {
+    display:flex;
+    justify-content: center;
+}
+.cr_howWork-feature{ 
+    display: flex;
+}
