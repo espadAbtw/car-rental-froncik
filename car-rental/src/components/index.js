@@ -1,4 +1,4 @@
 
 export { default as CarRent } from './carRent/carRent'
 export { default as Navbar } from './navbar/navbar'
-export { default as Opinion } from './opinion/opinion'
+export { default as Brand } from './brand/brand'
