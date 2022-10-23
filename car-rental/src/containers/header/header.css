@@ -4,6 +4,9 @@
 
 .cr_header {
     display: flex;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    overflow: hidden;
 }
 
 .cr_header-content {
@@ -13,15 +16,15 @@
     align-items: flex-start;
     flex-direction: column;
     margin-right: 5rem;
-    margin-left: 8rem;
+    margin-left: 5rem;
 }
 
 .cr_header-content h1 {
     font-family: var(--font-family);
     font-weight: 800;
-    font-size: 62px;
+    font-size: 72px;
     line-height: 75px;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.03em;
 }
 
 .cr_header-content p {
@@ -31,18 +34,47 @@
     font-weight: normal;
     font-size: 20px;
     line-height: 27px;
-    margin-top: 1.5rem;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    padding-left: 0.1rem;
 }
 
-.cr_header-image {
+.cr_header-wrap {
+    position: relative;
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    
 }
-.cr_header-image img {
-    width: 100%;
+.cr_header-wrap-glass {
+    min-height: 779px;
     height: 100%;
+    width: 100%;
+    position: absolute;
+    background: rgba(208, 212, 246, 0.59);
+    border-radius: 16px 0 0 0 ;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0.2px);
+    -webkit-backdrop-filter: blur(0.2px);
+    margin-right: 0;
+    z-index: 1;
+}
+
+.cr_header-wrap img {
+    position: absolute;
+    max-height: 100%;
+    left: -100px;
+    z-index: 2; 
+}
+.cr_header-vechicle_options {
+    display: flex;
+    margin-top: 3rem;
+}
+.cr_header-vechicle_options Button{
+    margin: 0 1em;
+    
 }
 
 @media screen and (max-width: 1110px) {
