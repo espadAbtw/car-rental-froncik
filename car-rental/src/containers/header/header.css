@@ -4,6 +4,8 @@
 
 .cr_header {
     display: flex;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 .cr_header-content {
@@ -13,15 +15,15 @@
     align-items: flex-start;
     flex-direction: column;
     margin-right: 5rem;
-    margin-left: 8rem;
+    margin-left: 5rem;
 }
 
 .cr_header-content h1 {
     font-family: var(--font-family);
     font-weight: 800;
-    font-size: 62px;
+    font-size: 72px;
     line-height: 75px;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.03em;
 }
 
 .cr_header-content p {
@@ -32,6 +34,8 @@
     font-size: 20px;
     line-height: 27px;
     margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-left: 0.1rem;
 }
 
 .cr_header-image {
@@ -44,7 +48,13 @@
     width: 100%;
     height: 100%;
 }
-
+.cr_header-vechicle_options {
+    display: flex;
+}
+.cr_header-vechicle_options Button{
+    margin: 0 1em;
+    
+}
 @media screen and (max-width: 1110px) {
     .cr_header {
         flex-direction: column;

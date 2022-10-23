@@ -1,6 +1,8 @@
 import React from "react";
 import "./header.css";
 import merol from "../../assets/merol.png";
+import Button from "../../components/button/button";
+import BookingSearch from "../../components/bookingSearch/bookingSearch";
 function Header() {
   return (
     <div className="cr_header section_padding" id="home">
@@ -13,9 +15,25 @@ function Header() {
           trip
         </p>
       
-      <div className="cr_header-vechicle_options"></div>
+      <div className="cr_header-vechicle_options">
+        <Button 
+          type="submit"
+          text="Cars"
+          icon="fa-solid fa-car-side"
+        />
+        <Button 
+          type="submit"
+          text="Cars"
+          icon="fa-solid fa-car"
+        />
+        <Button 
+          type="submit"
+          text="Cars"
+          icon="fa-solid fa-car"
+        />
+      </div>
       <div className="cr_header-booking_component"></div>
-      
+        <BookingSearch/>
       </div>
       <div className="cr_header-image">
         <img src={merol} alt="mercedes car" />
