@@ -23,19 +23,30 @@ function Header() {
         />
         <Button 
           type="submit"
-          text="Cars"
-          icon="fa-solid fa-car"
+          text="Motorcycle"
+          icon="fa-solid fa-motorcycle"
         />
         <Button 
           type="submit"
-          text="Cars"
-          icon="fa-solid fa-car"
+          text="Delivery"
+          icon="fa-solid fa-truck"
+        />
+        <Button 
+          type="submit"
+          text="Agricultural"
+          icon="fa-solid fa-tractor"
+        />
+        <Button 
+          type="submit"
+          text="Structural"
+          icon="fa-solid fa-snowplow"
         />
       </div>
       <div className="cr_header-booking_component"></div>
         <BookingSearch/>
       </div>
-      <div className="cr_header-image">
+      <div className="cr_header-wrap">
+        <div className="cr_header-wrap-glass"></div>
         <img src={merol} alt="mercedes car" />
       </div>
     </div>
