@@ -12,7 +12,7 @@ const Menu = () => (
       <a href="#howWork">How it Work</a>
     </p>
     <p>
-      <a href="#home">Rental Deals</a>
+      <a href="#popular">Rental Deals</a>
     </p>
     <p>
       <a href="#whyUs">Why Us</a>

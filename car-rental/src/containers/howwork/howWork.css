@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     font-family: var(--font-family);
+    margin-bottom: 2rem;
 }
 .cr_howWork-title {
     color: var(--color-text2);   
@@ -13,7 +14,7 @@
 .cr_howWork-text {
     color: var(--color-text1);
     font-size: 24px;
-    padding: 1rem 0;
+    padding: 2rem 0;
 }
 .cr_howWork-text .p2 {
     display:flex;
@@ -21,4 +22,5 @@
 }
 .cr_howWork-feature{ 
     display: flex;
+    margin-top:2rem;
 }
