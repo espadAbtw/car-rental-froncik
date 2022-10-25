@@ -11,7 +11,7 @@ function footer() {
               <img src={logo} alt="logo" />
             </li>
             <li>
-              {" "}
+             
               Arraging car hire in 1 country & 2 languages.<br /> Car rental is the
               biggest online car service in Poland. <br />Working with leading
               suppliers, we offer<br /> great prices on all car groups
