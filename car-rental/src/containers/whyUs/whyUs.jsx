@@ -32,7 +32,7 @@ const featuresData = [
 
 function whyUs() {
   return (
-    <div className="cr__whyUs section__padding" id="features">
+    <div className="cr__whyUs section__padding" id="whyUs">
     <div className="cr__whyUs-heading">
       <h1>Why choose us</h1>
     </div>
