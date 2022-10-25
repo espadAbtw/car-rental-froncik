@@ -35,7 +35,7 @@
     align-items: center;
     justify-content: center;
 }
-ul {
+.cr__footer-content ul {
     list-style: none;
 }
 
@@ -50,4 +50,7 @@ ul {
     margin-top: 1rem;
     display: flex;
     justify-content: center;
+}
+.cr__footer-content h2 {
+    margin-bottom: 1.5rem;
 }
