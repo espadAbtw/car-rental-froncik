@@ -5,6 +5,7 @@
     justify-content: center;
     font-family: var(--font-family);
     margin-bottom: 2rem;
+    overflow: hidden;
 }
 .cr_howWork-title {
     color: var(--color-text2);   
@@ -23,4 +24,23 @@
 .cr_howWork-feature{ 
     display: flex;
     margin-top:2rem;
+}
+@media screen and (max-width:1219px){
+    .cr_howWork-feature {
+        flex-direction: column;
+    }
+    .cr_howWork-text {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 815px) {
+    .cr_howWork-title h1{
+        font-size: 54px;
+        line-height: 54px;
+    }
+    .cr_howWork-text {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    
 }

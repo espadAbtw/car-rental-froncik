@@ -41,7 +41,7 @@ function whyUs() {
         <Feature title={item.title} text={item.text} key={item.title + index} />
       ))}
     </div>
-    <img class="lambo" src={lambo} alt="car"/>
+    <img className="lambo" src={lambo} alt="car"/>
   </div>
 );
       }

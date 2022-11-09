@@ -46,6 +46,16 @@
     right: 4%;
     margin-top: 2rem;
 }
+@media screen and (max-width: 1448px) {
+    .cr__whyUs {
+        align-items: center;
+    }
+    .cr__whyUs img{
+        display: none;
+    }
+
+    
+}
 @media screen and (max-width: 990px) {
     .cr__whyUs {
         flex-direction: column;

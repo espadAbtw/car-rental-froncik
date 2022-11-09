@@ -20,7 +20,7 @@ function popular() {
       </div>
       <div className="cr_popular-feature">
         {stockCars.map((data) => (
-          <PopularFeature data={data} />
+          <PopularFeature data={data} key={data.id}/>
         ))}
       </div>
     </div>

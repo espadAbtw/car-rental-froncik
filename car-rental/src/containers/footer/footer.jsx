@@ -25,7 +25,7 @@ function footer() {
                   <i className="fa-brands fa-instagram fa-xl"></i>
                 </li>
                 <li>
-                  <i class="fa-brands fa-youtube fa-xl"></i>
+                  <i className="fa-brands fa-youtube fa-xl"></i>
                 </li>
               </ul>{" "}
             </li>
