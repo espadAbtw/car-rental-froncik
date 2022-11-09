@@ -7,12 +7,13 @@
     font-family: var(--font-family); 
     border-radius: 15px;
     box-shadow: rgba(78, 23, 180, 0.171) 0px 5px 15px;
+    width: 100%;
 }
 
 .booking-container .button  {
     margin-top: 22px;
     height: 50px;
-    width: 200px;
+    width: 10rem;
     font-family: var(--font-family);
     color: #fff;
     background-color: #8a78f0;
@@ -46,3 +47,5 @@
     outline: 0;
     background-color: #fff;
 }
+
+
