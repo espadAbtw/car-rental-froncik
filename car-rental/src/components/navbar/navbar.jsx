@@ -28,51 +28,51 @@ function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
   return (
     <Fragment>
-    <div className="cr_navbar">
-      <div className="cr_navbar-links">
-        <div className="cr_navbar-links_logo">
-          <img src={logo} alt="logo" />
+      <div className="cr_navbar">
+        <div className="cr_navbar-links">
+          <div className="cr_navbar-links_logo">
+            <img src={logo} alt="logo" />
+          </div>
+          <div className="cr_navbar-links_container">
+            <Menu />
+          </div>
         </div>
-        <div className="cr_navbar-links_container">
-          <Menu />
+        <div className="cr_navbar-sign">
+          <p>Register</p>
+          <button type="button">Log In</button>
         </div>
-      </div>
-      <div className="cr_navbar-sign">
-        <p>Register</p>
-        <button type="button">Log In</button>
-      </div>
-      <div className="cr_navbar-menu">
-        {toggleMenu ? (
-          <RiCloseLine
-            color="#8a78f0"
-            size={27}
-            onClick={() => setToggleMenu(false)}
-          />
-        ) : (
-          <RiMenu3Line
-            color="#8a78f0"
-            size={27}
-            onClick={() => setToggleMenu(true)}
-          />
-        )}
-        {toggleMenu && (
-          <div className="cr_navbar-menu_container scale-up-center">
-            <div className="cr_navbar-menu_container-links">
-              <Menu />
-              <div className="cr_navbar-menu_container-links-sign">
-                <Link to='/login'>
-                  Register
-                </Link>
-                <Link to='/register'>
-                  <button type="button">Log In</button>
-                </Link>
+        <div className="cr_navbar-menu">
+          {toggleMenu ? (
+            <RiCloseLine
+              color="#8a78f0"
+              size={27}
+              onClick={() => setToggleMenu(false)}
+            />
+          ) : (
+            <RiMenu3Line
+              color="#8a78f0"
+              size={27}
+              onClick={() => setToggleMenu(true)}
+            />
+          )}
+
+          {/* {toggleMenu && (
+            <div className="cr_navbar-menu_container scale-up-center">
+              <div className="cr_navbar-menu_container-links">
+                <Menu />
+                <div className="cr_navbar-menu_container-links-sign"></div>
               </div>
             </div>
-          </div>
-        )}
+          )} */}
+        </div>
+        <Link to="/register">
+          Register
+        </Link>
+        <Link to="/login">
+          <button>Log In</button>
+        </Link>
       </div>
-    </div>
-      <Outlet/>
+      <Outlet />
     </Fragment>
   );
 }
