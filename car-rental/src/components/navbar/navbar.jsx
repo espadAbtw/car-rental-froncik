@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, Link } from "react-router-dom";
 import "./navbar.css";
 import logo from "..//../assets/logo.png";
 
@@ -38,8 +38,10 @@ function Navbar() {
           </div>
         </div>
         <div className="cr_navbar-sign">
-          <p>Register</p>
-          <button type="button">Log In</button>
+          <Link to="/car-rental-froncik/register">Register</Link>
+          <Link to="/car-rental-froncik/login">
+            <button>Log In</button>
+          </Link>
         </div>
         <div className="cr_navbar-menu">
           {toggleMenu ? (
@@ -56,21 +58,20 @@ function Navbar() {
             />
           )}
 
-          {/* {toggleMenu && (
+          {toggleMenu && (
             <div className="cr_navbar-menu_container scale-up-center">
               <div className="cr_navbar-menu_container-links">
                 <Menu />
-                <div className="cr_navbar-menu_container-links-sign"></div>
+                <div className="cr_navbar-menu_container-links-sign">
+                  <Link to="/register">Register</Link>
+                  <Link to="/login">
+                    <button>Log In</button>
+                  </Link>
+                </div>
               </div>
             </div>
-          )} */}
+          )}
         </div>
-        <Link to="/register">
-          Register
-        </Link>
-        <Link to="/login">
-          <button>Log In</button>
-        </Link>
       </div>
       <Outlet />
     </Fragment>

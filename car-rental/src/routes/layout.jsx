@@ -9,12 +9,12 @@ function Layout() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Navbar />}>
+        <Route path="/car-rental-froncik" element={<Navbar />}>
           <Route index element={<Home />} />
         </Route>
         {/* <Route path="/" element={<Home/>} /> */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/car-rental-froncik/login" element={<Login />} />
+        <Route path="/car-rental-froncik/register" element={<Register />} />
       </Routes> 
     </Router>
   );
