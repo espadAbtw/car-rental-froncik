@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
+import { Outlet, Link } from 'react-router-dom';
 import "./navbar.css";
 import logo from "..//../assets/logo.png";
 
@@ -26,6 +27,7 @@ const Menu = () => (
 function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
   return (
+    <Fragment>
     <div className="cr_navbar">
       <div className="cr_navbar-links">
         <div className="cr_navbar-links_logo">
@@ -58,14 +60,20 @@ function Navbar() {
             <div className="cr_navbar-menu_container-links">
               <Menu />
               <div className="cr_navbar-menu_container-links-sign">
-                <p>Register</p>
-                <button type="button">Log In</button>
+                <Link to='/login'>
+                  Register
+                </Link>
+                <Link to='/register'>
+                  <button type="button">Log In</button>
+                </Link>
               </div>
             </div>
           </div>
         )}
       </div>
     </div>
+      <Outlet/>
+    </Fragment>
   );
 }
 
