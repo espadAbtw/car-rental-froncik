@@ -5,7 +5,14 @@
   align-items: center;
   padding: 1rem 6rem;
 }
+.cr_navbar a {
+    text-decoration: none;
+    color: #717585;
+}
+.cr_navbar a:hover {
 
+    color: #8a78f0;
+}
 .cr_navbar-links {
   flex: 1;
   display: flex;
@@ -30,6 +37,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  gap: 1rem;
 }
 
 .cr_navbar-links_container p,
