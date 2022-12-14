@@ -46,9 +46,6 @@ function footer() {
             <li>
               <a href="#whyUs">Why Choose Us</a>
             </li>
-            <li>
-              <a href="#booking">Booking</a>
-            </li>
           </ul>
         </div>
         <div className="cr__footer-content-list3">
@@ -87,7 +84,7 @@ function footer() {
         </div>
       </div>
       <div className="cr_footer-copyrights">
-        Copyright © Mati Karaś i koledzy z Pcz 2022, All rights reserved
+        Copyright © Mateusz Karaś, All rights reserved
       </div>
     </div>
   );

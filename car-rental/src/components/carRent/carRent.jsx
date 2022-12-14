@@ -1,8 +1,9 @@
-import React from "react";
-import './carRent.css'
+import React from 'react'
 
 function carRent() {
-  return <div>carRent</div>;
+  return (
+    <div> </div>
+  )
 }
 
-export default carRent;
+export default carRent

@@ -112,6 +112,6 @@ const RegistrationPanel = () => {
         </div>
       </Row>
     </Container>
-  );
+  ); 
 };
 export default RegistrationPanel;

@@ -3,10 +3,9 @@ import { Container, Row } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import { signInWithGooglePopup } from "../../utils/firebase/firebase.utils";
 import logo from "..//../assets/logo.png";
 import InputWithoutValidation from "../../components/form/inputWithoutValidation/inputWithoutValidation";
-import Button from 'react-bootstrap/Button';
+
 
 
 const LoginPanel = () => {
@@ -16,10 +15,7 @@ const LoginPanel = () => {
     email: Yup.string().email(),
     password: Yup.string(),
   });
-const logGoogleUser = async () => {
-  const response = await signInWithGooglePopup();
-  console.log(response)
-}
+
   return (
     <Container className="container d-flex vh-100">
       <Row className="m-auto align-self-center col-12 col-md-10 col-xxl-8">
@@ -89,7 +85,7 @@ const logGoogleUser = async () => {
               </button>
             </Form>
           </Formik>
-          <Button variant="primary" onClick={logGoogleUser}>Zaloguj sie z google</Button>
+          
         </div>
       </Row>
     </Container>
