@@ -3,13 +3,13 @@ import SignUpForm from '../../components/sign-up-form/sign-up-form';
 import SignInForm from '../../components/sign-in-form/sign-in-form';
 import { Container, Row } from "react-bootstrap";
 import './sign-in.css'
-import { Navbar } from '../../components';
+
 function SignIn() {
 
   
   return (
     <Fragment>
-    <Navbar/>
+
     <Container className='d-flex mt-5'>
     <Row className='m-auto align-self-center col-12 col-md-10 col-xxl-8'>
     <div className='glassForm'>

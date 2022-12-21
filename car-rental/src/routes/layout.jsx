@@ -2,24 +2,24 @@ import Home from "./home/home";
 import { Navbar } from "../components";
 import Login from "./login/login";
 import Register from "./register/register";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from 'react-router-dom';
 import Booking from "../containers/booking/booking";
 import SignIn from "./sign-in/sign-in";
+import Myaccount from "./myaccount/myaccount";
 
 function Layout() {
   return (
-    <Router>
       <Routes>
         <Route path="/car-rental-froncik" element={<Navbar />}>
           <Route index element={<Home />} />
+          {/* <Route path="/" element={<Home/>} /> */}
+          {/* <Route path="login" element={<Login />} /> */}
+          <Route path="signin" element={<SignIn />} />
+          {/* <Route path="register" element={<Register />} /> */}
+          <Route path="booking" element={<Booking />} />
+          <Route path="myaccount" element={<Myaccount />} />
         </Route>
-        {/* <Route path="/" element={<Home/>} /> */}
-        <Route path="/car-rental-froncik/login" element={<Login />} />
-        <Route path="/car-rental-froncik/signin" element={<SignIn />} />
-        <Route path="/car-rental-froncik/register" element={<Register />} />
-        <Route path="/car-rental-froncik/booking" element={<Booking />} />
-      </Routes> 
-    </Router>
+      </Routes>
   );
 }
 export default Layout;

@@ -1,10 +1,11 @@
 import React, { useState, Fragment, useContext } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useNavigate } from "react-router-dom";
 import "./navbar.css";
 import logo from "..//../assets/logo.png";
 import { UserContext } from "../../contexts/user.context";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
+
 
 const Menu = () => (
   <>
@@ -29,7 +30,6 @@ const Menu = () => (
 function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
   const { currentUser } = useContext(UserContext);
- 
   return (
     <Fragment>
       <div className="cr_navbar">
@@ -47,7 +47,7 @@ function Navbar() {
         {currentUser ? (
             <span className='nav-link' >
             <Link to='/car-rental-froncik/myaccount/'>
-              <button onClick={signOutUser}>My account</button>{' '}
+              <button>My account</button>{' '}
               </Link>
               {' '}
               <button onClick={signOutUser}>Sign out</button>{' '}

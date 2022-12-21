@@ -1,0 +1,42 @@
+.cr__myAcc-container {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #e5dcec;
+}
+.cr_myAcc-data-container {
+    margin-top: 2vw;
+}
+.cr__myAcc-container-title {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    padding: 1vw;
+    background: rgba(255, 255, 255, 0.21);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.addCarForm{
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    padding: 1vw;
+    background: rgba(255, 255, 255, 0.21);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.carsDisplyer-content {
+    display: flex;
+}
+.addCar-title {
+    text-align: center;
+}
+.addCarButton {
+    display: flex;
+    justify-content: center;
+}

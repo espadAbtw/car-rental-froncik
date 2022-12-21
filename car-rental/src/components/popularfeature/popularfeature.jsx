@@ -10,24 +10,24 @@ function PopularFeature(props) {
             <img src={car} alt='car'/>
         </div>
         <div className='cr__features-pFname'>
-            <p>{data123.data.carName}</p>
+            <p>{data123.data.name}</p>
         </div>
         <div className='cr__features-pFspecify'>
         <table>
             <tbody>
             <tr>
-                <td><i className="fa-solid fa-user-group"></i>{data123.data.peopleNumber} </td>
-                <td><i className="fa-solid fa-gear"></i>{data123.data.gearbox} </td>
+                <td><i className="fa-solid fa-user-group"></i>{data123.data.passengerCapacity} People </td>
+                <td><i className="fa-solid fa-gear"></i>{data123.data.transmissionType} </td>
             </tr>
             
             <tr>
-                <td><i className="fa-solid fa-gauge"></i>{data123.data.mileage}</td>
-                <td><i className="fa-solid fa-gas-pump"></i>{data123.data.fuel}</td>
+                <td><i className="fa-solid fa-gauge"></i>{data123.data.fuelConsumption}km/1-litre</td>
+                <td><i className="fa-solid fa-gas-pump"></i>{data123.data.fuelType}</td>
             </tr>
             </tbody>
         </table>
         </div>
-        <div className='cr__features-pFprice'><span className='cr__features-pFprice-day'>${data123.data.costPerDay}</span>/PerDay</div>
+        <div className='cr__features-pFprice'><span className='cr__features-pFprice-day'>${data123.data.pricePerDay} </span>/PerDay {<i className="fa-solid fa-phone"></i>}{data123.data.phoneNumber}</div>
     </div>
   )
 }

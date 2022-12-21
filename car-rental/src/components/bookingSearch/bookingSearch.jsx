@@ -2,11 +2,18 @@ import React, { useState } from "react";
 import DatePicker from 'react-datepicker';
 import "./bookingSearch.css";
 import "react-datepicker/dist/react-datepicker.css"
+
 function BookingSearch() {
+
+
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
   return (
+
     <form className="booking-container">
+      <div className="booking-options">
+      
+      </div>
       <div className="booking-part">
       <label htmlFor="searchbar">Where to Pick Up</label>
         <input 
@@ -30,3 +37,5 @@ function BookingSearch() {
 }
 
 export default BookingSearch;
+
+

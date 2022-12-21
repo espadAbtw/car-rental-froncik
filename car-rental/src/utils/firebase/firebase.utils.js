@@ -1,4 +1,6 @@
 import { initializeApp } from "firebase/app";
+
+
 import {
   getAuth,
   signInWithPopup,
@@ -8,7 +10,8 @@ import {
   signOut,
   onAuthStateChanged,
 } from "firebase/auth";
-import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
+import { getFirestore, doc, getDoc, setDoc, collection, writeBatch } from "firebase/firestore";
+import { useNavigate } from "react-router";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAdND55Ola9D7c2lRFadsM6LRPGBX3KQ4E",
@@ -21,6 +24,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
+export const db = getFirestore();
 
 const provider = new GoogleAuthProvider();
 
@@ -33,7 +37,13 @@ export const auth = getAuth();
 export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
 
 //db
-export const db = getFirestore();
+
+
+// export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => {
+//   const collectionRef = collection(db, collectionKey)
+//   const batch = writeBatch(db)
+// }
+
 export const createUserDocumentFromAuth = async (
   userAuth,
   additionalInformation = {}
@@ -71,7 +81,11 @@ export const signInAuthUserWithEmailAndPassword = async (email, password) => {
   return await signInWithEmailAndPassword(auth, email, password);
 };
 
-export const signOutUser = async () => await signOut(auth);
+
+
+export const signOutUser = async (navigate) => {
+  await signOut(auth)
+};
 
 export const onAuthStateChangedListener = (callback) => 
   onAuthStateChanged(auth, callback)

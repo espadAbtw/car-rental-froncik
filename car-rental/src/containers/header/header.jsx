@@ -4,6 +4,8 @@ import merol from "../../assets/merol.png";
 import Button from "../../components/button/button";
 import BookingSearch from "../../components/bookingSearch/bookingSearch";
 function Header() {
+  
+
   return (
     <div className="cr_header section_padding" id="home">
       <div className="cr_header-content">
