@@ -1,6 +1,6 @@
 import React, { useState, Fragment, useContext } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
-import { Outlet, Link, useNavigate } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import "./navbar.css";
 import logo from "..//../assets/logo.png";
 import { UserContext } from "../../contexts/user.context";

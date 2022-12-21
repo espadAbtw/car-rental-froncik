@@ -11,7 +11,7 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 import { getFirestore, doc, getDoc, setDoc, collection, writeBatch } from "firebase/firestore";
-import { useNavigate } from "react-router";
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAdND55Ola9D7c2lRFadsM6LRPGBX3KQ4E",
@@ -83,8 +83,9 @@ export const signInAuthUserWithEmailAndPassword = async (email, password) => {
 
 
 
-export const signOutUser = async (navigate) => {
+export const signOutUser = async () => {
   await signOut(auth)
+  window.location.replace('/car-rental-froncik')
 };
 
 export const onAuthStateChangedListener = (callback) => 
