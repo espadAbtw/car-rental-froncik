@@ -59,10 +59,12 @@ function SignUpForm() {
           <FormInput
             label="Display name"
             type="text"
+            maxLength={10}
             onChange={handleChange}
             name="displayName"
             value={displayName}
             required
+            
           />
 
           

@@ -96,6 +96,7 @@ function AddCarForm() {
       <form onSubmit={addVehicle}>
         <TextField
           id="outlined-name"
+          inputProps={{maxLength: 16}}
           label="Name"
           value={name}
           onChange={(event) => setName(event.target.value)}
@@ -138,6 +139,7 @@ function AddCarForm() {
           type="number"
           value={fuelConsumption}
           onChange={(event) => setFuelConsumption(event.target.value)}
+          inputProps={{ min: 0, max:100}}
           fullWidth
           required
           margin="dense"
@@ -180,17 +182,19 @@ function AddCarForm() {
           onChange={(event) => setPricePerDay(event.target.value)}
           fullWidth
           required
+          inputProps={{ min: 0, max:1000}}
           margin="dense"
         ></TextField>
         <TextField
           id="outlined-name"
           label="Phone Number"
           type="number"
-          placeholder="+48 123 123 123"
+          placeholder="123 123 123"
           value={phoneNumber}
           onChange={(event) => setPhoneNumber(event.target.value)}
           fullWidth
           required
+          inputProps={{ maxLength: 9}}
           margin="dense"
         ></TextField>
         <FormControl fullWidth margin="dense" required>
