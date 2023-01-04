@@ -95,7 +95,7 @@ function Booking() {
                 <BookingPopularFeature data={data} key={data.id} />
               )) 
             ) : (
-              <div> <h2>Brak dostępnych pojazdów</h2>  </div>
+              <div> <h2>No available vehicles</h2>  </div>
             )}
             
            
