@@ -32,17 +32,18 @@ const featuresData = [
 
 function whyUs() {
   return (
-    <div className="cr__whyUs section__padding" id="whyUs">
-    <div className="cr__whyUs-heading">
-      <h1>Why choose us</h1>
+    <div className="cr__whyUs section__margin" id="whyUs">
+    <div className="cr__whyUs-heading" >
+      <h1 >Why choose us</h1>
     </div>
-    <div className="cr__features-container">
+    <div className="cr__features-container"  >
       {featuresData.map((item, index) => (
         <Feature title={item.title} text={item.text} key={item.title + index} />
       ))}
     </div>
     <img className="lambo" src={lambo} alt="car"/>
   </div>
+
 );
       }
 

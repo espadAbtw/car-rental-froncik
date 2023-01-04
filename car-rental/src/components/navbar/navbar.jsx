@@ -1,31 +1,45 @@
 import React, { useState, Fragment, useContext } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet} from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
 import "./navbar.css";
 import logo from "..//../assets/logo.png";
 import { UserContext } from "../../contexts/user.context";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 
 
-const Menu = () => (
+const Menu = () => {
+  const { currentUser } = useContext(UserContext)
+  return (
+  
   <>
     <p>
-      <a href="#home">Home</a>
+      <Link to="/car-rental-froncik#home">Home</Link>
     </p>
     <p>
-      <a href="#howWork">How it Work</a>
+      <Link to="/car-rental-froncik#howWork">How it Work</Link>
     </p>
     <p>
-      <a href="#popular">Rental Deals</a>
+      <Link to="/car-rental-froncik#popular">Rental Deals</Link>
     </p>
-    <p>
-      <a href="#whyUs">Why Us</a>
+    <p >
+      <Link to="/car-rental-froncik#whyUs">Why Us</Link>
     </p>
-    <p>
-      <a href="#home">Booking</a>
+
+    { currentUser ? (
+      <Fragment>
+      <p className="account_link">
+      <Link to="myaccount"> My account </Link>
     </p>
+    <p onClick={signOutUser} className="account_link">
+      Sign out
+    </p>
+    </Fragment>
+   ) 
+    : (<p><Link to="signin" className="account_link">Sign In</Link></p>)}
+    
   </>
-);
+)};
 
 function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -46,7 +60,7 @@ function Navbar() {
         <div className="cr_navbar-sign">
         {currentUser ? (
             <span className='nav-link' >
-            <Link to='/car-rental-froncik/myaccount/'>
+            <Link to='/car-rental-froncik/myaccount'>
               <button>My account</button>{' '}
               </Link>
               {' '}

@@ -1,6 +1,4 @@
 import { initializeApp } from "firebase/app";
-
-
 import {
   getAuth,
   signInWithPopup,
@@ -10,8 +8,8 @@ import {
   signOut,
   onAuthStateChanged,
 } from "firebase/auth";
-import { getFirestore, doc, getDoc, setDoc, collection, writeBatch } from "firebase/firestore";
-
+import { getFirestore, doc, getDoc, setDoc} from "firebase/firestore";
+import { getStorage } from "firebase/storage"
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAdND55Ola9D7c2lRFadsM6LRPGBX3KQ4E",
@@ -23,8 +21,10 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
+
 const firebaseApp = initializeApp(firebaseConfig);
 export const db = getFirestore();
+export const storage = getStorage();
 
 const provider = new GoogleAuthProvider();
 
@@ -92,3 +92,4 @@ export const onAuthStateChangedListener = (callback) =>
   onAuthStateChanged(auth, callback)
  
 
+//Storage

@@ -5,6 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { UserProvider } from "./contexts/user.context";
+import { CarsContext, CarsProvider } from "./contexts/cars.context";
 import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -12,7 +13,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserProvider>
-        <App />
+        <CarsProvider>
+          <App />
+        </CarsProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>

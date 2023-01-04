@@ -1,13 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./popular.css";
-import PopularFeature from "../../components/popularfeature/popularfeature";
-import { stockCars } from "../../data";
+import ReadPopularFeature from "../../components/readpopularfeature/readpopularfeature";
+import { db } from "../../utils/firebase/firebase.utils";
+import { collection, getDocs } from "firebase/firestore";
 
-function popular() {
+function Popular() {
+  const [firstThree, setFirstThree] = useState();
+  const fetchPost = async () => {
+    await getDocs(collection(db, "vehicles")).then((QuerySnapshot) => {
+      const newData = QuerySnapshot.docs.map((doc) => ({
+        ...doc.data(0),
+        id: doc.id,
+      }));
+      const newdata3 = [...newData.slice(0, 3)];
+      setFirstThree(newdata3);    
+    });
+  };
+  useEffect(() => {
+    fetchPost();
+  }, []);
+
   return (
     <div className="cr_popular section__margin" id="popular">
       <div className="cr_popular-title">
-        <h1>Most popular car rental deals</h1>
+        <h1>Recent vehicle rental deals</h1>
       </div>
       <div className="cr_popular-text">
         <p>
@@ -19,12 +35,14 @@ function popular() {
         </p>
       </div>
       <div className="cr_popular-feature">
-        {stockCars.map((data) => (
-          <PopularFeature data={data} key={data.id}/>
-        ))}
+        {firstThree &&
+          firstThree.length > 0 &&
+          firstThree.map((data) => (
+            <ReadPopularFeature data={data} key={data.id} />
+          ))}
       </div>
     </div>
   );
 }
 
-export default popular;
+export default Popular;

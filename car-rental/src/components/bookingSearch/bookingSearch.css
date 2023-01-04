@@ -28,7 +28,7 @@
 }
 .booking-container label {
     font-weight: bold;
-    font-size: 15px;
+    font-size: 14px;
     text-align: left;
     letter-spacing: -0.08em;
     
@@ -38,7 +38,7 @@
     margin-left: 5px;
     margin-right: 5px;
 }
-.booking-container input {
+.booking-container input, .booking-container select {
     border: 1px solid #ededef;
     border-radius: 10px;
     height: 50px;
@@ -47,5 +47,14 @@
     outline: 0;
     background-color: #fff;
 }
+.formAlertSearch {
+    position: absolute;
 
+}
 
+@media screen and (max-width: 906px) {
+    .booking-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+}

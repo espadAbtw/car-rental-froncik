@@ -55,11 +55,10 @@
 }
 .cr_navbar-sign button, 
 .cr_navbar-menu_container button {
-    padding: 0.8rem 1.8rem;
+    padding: 1rem 2rem;
     font-family: var(--font-family);
     color: #fff;
     background-color: #8a78f0;
-    font-weight: 300;
     border: 0;
     outline: none;
     font-size: 16px;
@@ -101,7 +100,9 @@
 .cr_navbar-menu_container-links-sign {
     display: none;
 }
-
+.account_link {
+    display: none;
+}
 @media screen and (max-width: 1110px) {
     .cr_navbar-links_container {
         display: none;
@@ -109,18 +110,25 @@
     .cr_navbar-menu {
         display: flex;
     }
+    .account_link {
+        display: block;
+    }
+    
 }
 @media screen and (max-width: 700px) {
     .cr_navbar {
         padding: 2rem 4rem;
     }
-
+    .cr_navbar-sign button{
+        display: none;
+    }
+    
 }
 @media screen and (max-width: 550px) {
     .cr_navbar {
         padding: 2rem;
     }
-    .cr_navbar-sign {
+    .cr_navbar-sign button{
         display: none;
     }
     .cr_navbar-menu_container{

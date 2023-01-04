@@ -61,16 +61,7 @@ const LoginPanel = () => {
                 autoComplete="on"
                 maxLength={64}
                 required
-              />
-              <Row className="d-flex w-100 mt-2">
-                <div className="ms-auto col-sm-12 col-md-6 text-sm-center text-md-left">
-                  <input type="checkbox" value="remember-me" id="rememberMe" />
-                  <label className="ms-1" htmlFor="rememberMe">
-                    Remember me
-                  </label>
-                </div>
-
-              </Row>
+              ></InputWithoutValidation>
               <p className="my-2 text-center">
                 You don't have an account?
                 <Link

@@ -17,33 +17,7 @@ function Header() {
           trip
         </p>
       
-      <div className="cr_header-vechicle_options">
-        <Button 
-          type="submit"
-          text="Cars"
-          icon="fa-solid fa-car-side"
-        />
-        <Button 
-          type="submit"
-          text="Motorcycle"
-          icon="fa-solid fa-motorcycle"
-        />
-        <Button 
-          type="submit"
-          text="Delivery"
-          icon="fa-solid fa-truck"
-        />
-        <Button 
-          type="submit"
-          text="Agricultural"
-          icon="fa-solid fa-tractor"
-        />
-        <Button 
-          type="submit"
-          text="Structural"
-          icon="fa-solid fa-snowplow"
-        />
-      </div>
+      
       <div className="cr_header-booking_component"></div>
         <BookingSearch/>
       </div>

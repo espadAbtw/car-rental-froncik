@@ -13,7 +13,10 @@ const RegistrationPanel = () => {
   const [successful, setSuccessful] = useState(false);
   const [message, setMessage] = useState("");
 
-  
+  const submitHandler = (values) => {
+    console.log(values)
+    
+  }
   const validate = Yup.object({
     email: Yup.string().email("Must be a valid email").required("Required"),
     password: Yup.string()
@@ -37,7 +40,7 @@ const RegistrationPanel = () => {
               confirmPassword: "",
             }}
             onSubmit={(values) => {
-              console.log(values);
+              
             }}
             validationSchema={validate}
           >

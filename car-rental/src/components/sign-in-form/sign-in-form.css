@@ -1,0 +1,10 @@
+@media screen and (max-width: 700px) {
+    .glassForm {
+        flex-direction: column !important;
+    }
+    
+}
+.button-container 
+{
+    margin-top: 1.7vw;
+}

@@ -16,6 +16,8 @@
     align-items: center;
 }
 .cr_booking_body_carlist_row{
-    max-height: 50%;
-    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+ 
 }
