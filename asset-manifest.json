@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/car-rental-froncik/static/css/main.0359122d.css",
-    "main.js": "/car-rental-froncik/static/js/main.f0c9504d.js",
+    "main.js": "/car-rental-froncik/static/js/main.c6071c45.js",
     "static/js/787.e778e39e.chunk.js": "/car-rental-froncik/static/js/787.e778e39e.chunk.js",
     "static/media/merol.png": "/car-rental-froncik/static/media/merol.41782650615cdda77a28.png",
     "static/media/rsz_merol.png": "/car-rental-froncik/static/media/rsz_merol.9f9ca82a97efdcde40f6.png",
@@ -9,11 +9,11 @@
     "static/media/logo.png": "/car-rental-froncik/static/media/logo.0364289d155e4bcc3e5e.png",
     "index.html": "/car-rental-froncik/index.html",
     "main.0359122d.css.map": "/car-rental-froncik/static/css/main.0359122d.css.map",
-    "main.f0c9504d.js.map": "/car-rental-froncik/static/js/main.f0c9504d.js.map",
+    "main.c6071c45.js.map": "/car-rental-froncik/static/js/main.c6071c45.js.map",
     "787.e778e39e.chunk.js.map": "/car-rental-froncik/static/js/787.e778e39e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0359122d.css",
-    "static/js/main.f0c9504d.js"
+    "static/js/main.c6071c45.js"
   ]
 }
