@@ -8,6 +8,7 @@ import {
   DialogContent,
   DialogContentText,
   DialogTitle,
+  Rating,
   Select,
   TextField,
 } from "@mui/material";
@@ -18,10 +19,14 @@ import DatePicker from "react-datepicker";
 import { UserContext } from "../../contexts/user.context";
 function BookingPopularFeature(props) {
   const data123 = props;
+  const [rateValue, setRateValue] = useState(averageRating(data123.data.rating));
   const [open, setOpen] = useState(false);
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
-  const { currentUser } = useContext(UserContext)
+  const [ dbValue, setDbValue] = useState(data123.data.rating);
+  const [ dbValueLen, setDbValueLen] = useState(data123.data.rating.length);
+  const { currentUser } = useContext(UserContext);
+  
   function dateConverter(data) {
     let temp = data;
     console.log("Przed petla: ", temp);
@@ -30,6 +35,22 @@ function BookingPopularFeature(props) {
     }
     console.log("Po petli", temp);
     return temp;
+  }
+  function averageRating(data) {
+   // console.log(data)
+      if (data === undefined) {
+        //console.log("Jestem kurwa tutaj")
+        return 0//setRateValue(0) 
+      }
+      let sum = 0;
+      for(let i=0; i < data?.length; i++){
+        sum += data[i]
+     //   console.log("chuj")
+      }
+      let avg = sum / data.length
+   //   console.log(avg)
+      //setRateValue(avg)
+      return avg
   }
   const handleClickOpen = () => {
     setOpen(true);
@@ -46,7 +67,6 @@ function BookingPopularFeature(props) {
       // setTerm1((currentTerm) => { return currentTerm.concat(startDate)})
       // setTerm2((currentTerm) => { return currentTerm.concat(endDate)})
 
-
       const docRef = doc(db, "vehicles", data123.data.id);
 
       await updateDoc(docRef, {
@@ -60,9 +80,26 @@ function BookingPopularFeature(props) {
       console.error("Error updating vehicle: ", e);
     }
   };
-  useEffect(() => {
+  const ratingHandler = async (e) => {
     
-  }, []);
+    const docRef = doc(db, "vehicles", data123.data.id);
+      try {
+        await updateDoc(docRef, {
+          rating: dbValue,
+        });
+        alert("Dodano ocene");
+      } catch (e) {
+        console.error("Error with rating: ", e)
+      }
+      
+  }
+  useEffect(() => {
+    //console.log("DbVal: ", dbValue)
+    if(dbValue.length!== dbValueLen){
+      ratingHandler()
+    };
+    
+  }, [dbValue])
   return (
     <div className="cr__features-pFcontainer">
       <div className="cr__features-pFimage">
@@ -74,6 +111,16 @@ function BookingPopularFeature(props) {
       </div>
       <div className="cr__features-pFname">
         <p>{data123.data.name}</p>
+        <Rating readOnly={currentUser ? false : true} name="simple-controlled" value={rateValue} size="medium"  onChange={(event, newValue) => {
+          // setTerm1((currentTerm) => { return currentTerm.concat(startDate)})
+           // console.log(newValue)
+            if(newValue === null)
+            {
+              newValue = rateValue
+            }
+            setDbValue((currentValue) => { return currentValue.concat(newValue)})
+            
+        }} / >
       </div>
       <div className="cr__features-pFspecify">
         <table>
@@ -109,14 +156,19 @@ function BookingPopularFeature(props) {
         /PerDay {<i className="fa-solid fa-phone"></i>}
         {data123.data.phoneNumber}
       </div>
-      {currentUser ? <Button
-        variant="outlined"
-        startIcon={<i className="fa-solid fa-pen-to-square"></i>}
-        color="secondary"
-        onClick={handleClickOpen}
-      >
-        Book
-      </Button> : (<div>Please log in to make a reseravation </div>) }
+      
+      {currentUser ? (
+        <Button
+          variant="outlined"
+          startIcon={<i className="fa-solid fa-pen-to-square"></i>}
+          color="secondary"
+          onClick={handleClickOpen}
+        >
+          Book
+        </Button>
+      ) : (
+        <div>Please log in to make a reseravation </div>
+      )}
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle>Booking</DialogTitle>
         <DialogContent>

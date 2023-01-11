@@ -76,6 +76,7 @@ function AddCarForm() {
             endDate: endDate,
             termsStart: [],
             termsEnd: [],
+            rating: [],
           });
           setNumberOfCars(numberOfCars + 1);
           //console.log("Document written with ID: ", docRef.id);
